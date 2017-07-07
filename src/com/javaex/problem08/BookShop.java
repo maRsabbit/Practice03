@@ -23,6 +23,7 @@ public class BookShop {
         Scanner scanner = new Scanner(System.in);
         System.out.print("대여 하고 싶은 책의 번호를 입력하세요:");
         int num = scanner.nextInt();
+        books[num-1].rent(num);
         scanner.close();
 
         // (1) 입력된 번호에 맞는 책을 찾아 대여 되었음(상태코드=0)을 체크 합니다.
@@ -34,10 +35,9 @@ public class BookShop {
 
     //(2)전달받은 배열을 모두 출력하는 메소드
     private static void displayBookInfo(Book[] books) {
-    	Book book = new Book();
         //코드작성
-    	for(int i=1; i<books.length; i++) {
-    		book.print(books[i]);
+    	for(int i=0; i<books.length; i++) {
+    		books[i].print();
     	}
     }
 }

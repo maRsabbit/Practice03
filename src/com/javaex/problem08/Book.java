@@ -22,7 +22,7 @@ public class Book {
 		System.out.println(title+"이(가) 대여됬습니다.");
 		stateCode = 0;
 	} 
-	public void print(Book book) {
+	public void print() {
 		if(stateCode == 0) {
 			System.out.println(bookNo+"책 제목 : "+
 		title+", 작가 : "+author+", 대여 유무 : 대여 중");

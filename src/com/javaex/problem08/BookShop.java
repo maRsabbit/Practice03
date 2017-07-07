@@ -6,7 +6,6 @@ public class BookShop {
 
     public static void main(String[] args) {
         Book[] books = new Book[10];
-
         books[0] = new Book(1, "트와일라잇", "스테파니메이어");
         books[1] = new Book(2, "뉴문", "스테파니메이어");
         books[2] = new Book(3, "이클립스", "스테파니메이어");
@@ -35,6 +34,10 @@ public class BookShop {
 
     //(2)전달받은 배열을 모두 출력하는 메소드
     private static void displayBookInfo(Book[] books) {
+    	Book book = new Book();
         //코드작성
+    	for(int i=1; i<books.length; i++) {
+    		book.print(books[i]);
+    	}
     }
 }
